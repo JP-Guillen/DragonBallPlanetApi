@@ -27,7 +27,7 @@ import edu.ucne.dragonballplanetapi.ui.theme.DragonBallPlanetApiTheme
 @Composable
 fun DetailScreen(
     onBack: () -> Unit,
-    viewModel: DetailViewModel = hiltViewModel()
+    viewModel: DetailPlanetViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     DetailBody(state = state, onBack = onBack)
@@ -36,7 +36,7 @@ fun DetailScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailBody(
-    state: DetailUiState,
+    state: DetailPlanetUiState,
     onBack: () -> Unit
 ) {
     Scaffold(
@@ -78,7 +78,7 @@ fun DetailBody(
 fun DetailBodyPreview() {
     DragonBallPlanetApiTheme {
         DetailBody(
-            state = DetailUiState(
+            state = DetailPlanetUiState(
                 planet = Planet(
                     id = 1,
                     name = "Namek",
