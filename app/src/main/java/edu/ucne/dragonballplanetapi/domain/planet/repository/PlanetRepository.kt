@@ -1,7 +1,7 @@
-package edu.ucne.dragonballplanetapi.domain.repository
+package edu.ucne.dragonballplanetapi.domain.planet.repository
 
 import edu.ucne.dragonballplanetapi.data.remote.Resource
-import edu.ucne.dragonballplanetapi.domain.model.Planet
+import edu.ucne.dragonballplanetapi.domain.planet.model.Planet
 import kotlinx.coroutines.flow.Flow
 
 interface PlanetRepository {
@@ -12,4 +12,5 @@ interface PlanetRepository {
     ): Flow<Resource<List<Planet>>>
 
     fun getPlanetDetail(id: Int): Flow<Resource<Planet>>
+
 }

@@ -1,6 +1,6 @@
-package edu.ucne.dragonballplanetapi.presentation.detail
+package edu.ucne.dragonballplanetapi.presentation.planet.detail
 
-import edu.ucne.dragonballplanetapi.domain.model.Planet
+import edu.ucne.dragonballplanetapi.domain.planet.model.Planet
 
 data class DetailPlanetUiState(
     val isLoading: Boolean = false,

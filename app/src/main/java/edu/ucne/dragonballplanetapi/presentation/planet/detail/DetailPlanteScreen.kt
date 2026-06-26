@@ -1,4 +1,4 @@
-package edu.ucne.dragonballplanetapi.presentation.detail
+package edu.ucne.dragonballplanetapi.presentation.planet.detail
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
-import edu.ucne.dragonballplanetapi.domain.model.Planet
+import edu.ucne.dragonballplanetapi.domain.planet.model.Planet
 import edu.ucne.dragonballplanetapi.ui.theme.DragonBallPlanetApiTheme
 
 @Composable
