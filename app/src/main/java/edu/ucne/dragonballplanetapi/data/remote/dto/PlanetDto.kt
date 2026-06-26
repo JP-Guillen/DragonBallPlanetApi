@@ -1,7 +1,6 @@
 package edu.ucne.dragonballplanetapi.data.remote.dto
 
-import com.squareup.moshi.Json
-import edu.ucne.dragonballplanetapi.domain.model.Planet
+import edu.ucne.dragonballplanetapi.domain.planet.model.Planet
 
 data class PlanetResponseDto(
     val items: List<PlanetDto>
@@ -12,14 +11,9 @@ data class PlanetDto(
     val name: String,
     val isDestroyed: Boolean,
     val description: String,
-    val image: String,
-    @Json(name = "deletedAt") val deletedAt: String?
+    val image: String
 ) {
     fun toDomain() = Planet(
-        id = id,
-        name = name,
-        isDestroyed = isDestroyed,
-        description = description,
-        image = image
+        id, name, isDestroyed, description, image
     )
 }
