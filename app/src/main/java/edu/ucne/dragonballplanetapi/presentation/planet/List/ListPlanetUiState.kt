@@ -1,6 +1,6 @@
-package edu.ucne.dragonballplanetapi.presentation.List
+package edu.ucne.dragonballplanetapi.presentation.planet.List
 
-import edu.ucne.dragonballplanetapi.domain.model.Planet
+import edu.ucne.dragonballplanetapi.domain.planet.model.Planet
 
 data class ListPlanetUiState(
     val isLoading: Boolean = false,

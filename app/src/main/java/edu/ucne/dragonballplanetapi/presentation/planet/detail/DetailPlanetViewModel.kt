@@ -1,4 +1,4 @@
-package edu.ucne.dragonballplanetapi.presentation.detail
+package edu.ucne.dragonballplanetapi.presentation.planet.detail
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
 import edu.ucne.dragonballplanetapi.data.remote.Resource
-import edu.ucne.dragonballplanetapi.domain.usecase.GetPlanetDetailUseCase
+import edu.ucne.dragonballplanetapi.domain.planet.usecase.GetPlanetDetailUseCase
 import edu.ucne.dragonballplanetapi.presentation.navigation.Screen
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -24,7 +24,7 @@ class DetailPlanetViewModel @Inject constructor(
     val state = _state.asStateFlow()
 
     init {
-        val args = savedStateHandle.toRoute<Screen.Detail>()
+        val args = savedStateHandle.toRoute<Screen.PlanetDetail>()
         loadPlanet(args.id)
     }
 
